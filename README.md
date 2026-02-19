@@ -4,6 +4,23 @@ A ServiceNow-based automation project designed to simplify and automate ticket a
 
 ---
 
+## 👨‍💻 Team Members
+
+- G. Sravani – Users & Groups Creation  
+- G. Chandana – Roles & Custom Table Configuration  
+- J. Meghana – Role & User Assignment  
+- M. Sanjana – ACL Configuration  
+- S. Swathi – Flow Automation  
+
+---
+
+## 🎥 Demo
+
+📌 Watch Project Demo:  
+
+
+---
+
 ## 📌 Overview
 
 ### 🎯 Purpose
@@ -71,15 +88,65 @@ If issue =
 
 ---
 
-## ▶️ How It Works
+## ▶️ How to Run the Project
 
-1. User opens Operations Related form  
-2. Enters issue details  
-3. Clicks **Submit**  
-4. Flow Designer triggers automatically  
-5. Ticket gets assigned to correct group  
+Follow the below steps to run this project in ServiceNow:
+
+### Step 1 — Create ServiceNow Personal Developer Instance
+1. Go to https://developer.servicenow.com  
+2. Sign in with your account  
+3. Create a Personal Developer Instance (PDI)
 
 ---
+
+### Step 2 — Import the Update Set
+1. Navigate to:
+   **System Update Sets → Retrieved Update Sets**
+2. Click **Import Update Set from XML**
+3. Upload the project update set file (Streamlining Ticket Assignment).
+4. Click **Preview Update Set**
+5. Resolve any preview problems if shown.
+6. Click **Commit Update Set**.
+
+---
+
+### Step 3 — Verify Project Components
+After committing, verify the following:
+
+- Custom Table: **Operations Related**
+- Users and Groups created
+- Roles assigned correctly
+- ACL rules configured
+- Flow Designer flows available:
+  - Regarding Certificates
+  - Regarding Platform
+
+---
+
+### Step 4 — Execute the Project
+1. Navigate to:
+   **Operations Related → New**
+2. Fill in ticket details.
+3. Select an Issue type.
+4. Click **Submit**.
+
+---
+
+### Step 5 — Validate Automation
+- If issue = Regarding Certificates  
+  → Ticket auto-assigns to **Certificate Group**
+
+- If issue = Platform related / Login / 404 / User Expired  
+  → Ticket auto-assigns to **Platform Group**
+
+---
+
+### Step 6 — Verify Results
+1. Open the created record.
+2. Check **Assigned to Group** field.
+3. Confirm automatic assignment by Flow Designer.
+
+
 
 ## 🧪 Testing
 ✔ Manual testing performed for:
@@ -101,16 +168,6 @@ If issue =
 - Dashboard reporting  
 - SLA tracking  
 - Advanced workflow approvals  
-
----
-
-## 👨‍💻 Team Members
-
-- G. Sravani – Users & Groups  
-- G. Chandana – Roles & Table Creation  
-- J. Meghana – Role & User Assignment  
-- M. Sanjana – ACL Configuration  
-- S. Swathi – Flow Automation  
 
 ---
 
