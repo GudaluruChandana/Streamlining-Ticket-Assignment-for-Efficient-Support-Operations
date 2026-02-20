@@ -27,6 +27,16 @@ The solution uses:
 
 ---
 
+## 🚀 Project Highlights
+
+- ⚡ Automated ticket routing using Flow Designer
+- 🔐 Role-based security with ACL implementation
+- 👥 Group-based assignment logic
+- 📉 Reduced manual ticket handling
+- 🧩 Custom ServiceNow data model
+
+---
+
 ## 🎯 Objectives
 
 - Automate support ticket assignment
