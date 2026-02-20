@@ -1,180 +1,230 @@
 # 🎫 Streamlining Ticket Assignment for Efficient Support Operations
 
-A ServiceNow-based automation project designed to simplify and automate ticket assignment using Flow Designer, custom tables, roles, groups, and ACL security.
+> 🚀 A ServiceNow automation project designed to intelligently route support tickets to the correct teams using Flow Designer, custom tables, roles, groups, and ACL-based security.
+
+---
+
+## 🌟 Project Overview
+
+Modern support teams often face delays due to manual ticket assignment.  
+This project automates ticket routing in ServiceNow based on issue type, ensuring faster resolution, improved efficiency, and optimized resource utilization.
+
+The solution uses:
+
+- Custom Tables
+- Flow Designer Automation
+- Role-Based Access Control (RBAC)
+- ACL Security
+- Group-based Assignment Logic
+
+---
+
+## 🎯 Objectives
+
+- Automate support ticket assignment
+- Reduce manual intervention
+- Improve operational efficiency
+- Implement secure role-based access
+- Enhance support team productivity
 
 ---
 
 ## 👨‍💻 Team Members
 
-- G. Sravani – Users & Groups Creation  
-- G. Chandana – Roles & Custom Table Configuration  
-- J. Meghana – Role & User Assignment  
-- M. Sanjana – ACL Configuration  
-- S. Swathi – Flow Automation  
+| Team Member | Responsibility |
+|---|---|
+| G. Sravani | Users & Groups Creation |
+| G. Chandana | Roles & Custom Table Configuration |
+| J. Meghana | Role & User Assignment |
+| M. Sanjana | ACL Configuration |
+| S. Swathi | Flow Automation |
 
 ---
 
-## 🎥 Demo
+## 🧩 Project Architecture
 
-📌 Watch Project Demo:  
+### 🔹 Custom Table
 
+**Operations Related (u_operations_related)**
+
+Used to capture support issues and trigger automation workflows.
 
 ---
 
-## 📌 Overview
+### 🔹 Issue Categories
 
-### 🎯 Purpose
-This project automates support ticket routing in ServiceNow to reduce manual work, improve response time, and ensure efficient group-based ticket handling.
+- Regarding Certificates
+- Unable to login to platform
+- 404 Error
+- Regarding user expired
 
-### ✨ Key Features
-- 🧑‍💻 Custom **Operations Related** table
-- 👥 User & Group management (Certificate & Platform)
-- 🔐 Role-based access using ACL
-- ⚙️ Automated ticket assignment using Flow Designer
-- 📄 Issue-based routing logic
-- 🚀 Reduced manual intervention
+---
+
+### 🔹 User Groups
+
+- Certificate Group  
+- Platform Group
+
+---
+
+### 🔹 Roles
+
+- Certification_role  
+- Platform_role
+
+---
+
+## 🔐 Security Implementation
+
+Role-based security implemented using:
+
+- Access Control Lists (ACL)
+- Read & Write permissions
+- Admin-level validation
+
+This ensures only authorized users can access or modify records.
+
+---
+
+## ⚙️ Flow Designer Automation
+
+### 📌 Certificate Assignment Flow
+
+**Trigger Condition:**
+
+
+**Action:**  
+➡ Ticket automatically assigned to **Certificate Group**
+
+---
+
+### 📌 Platform Assignment Flow
+
+**Trigger Conditions:**
+
+
+**Action:**  
+➡ Ticket automatically assigned to **Platform Group**
+
+---
+
+## 🧪 Expected Output (Project Validation)
+
+When a new ticket is created:
+
+✔ Flow triggers automatically  
+✔ Ticket assigned to correct group  
+✔ No manual intervention required  
+✔ Flow execution status = Successful
 
 ---
 
 ## 🛠 Tech Stack
 
 | Layer | Technology |
-|-------|------------|
+|---|---|
 | Platform | ServiceNow (Personal Developer Instance) |
-| UI | Form-based Modules |
-| Logic | Flow Designer |
+| UI | ServiceNow Forms |
+| Automation | Flow Designer |
 | Database | ServiceNow Tables |
 | Security | Roles & ACL |
 
 ---
 
-## ⚙️ Project Modules
-
-### 👤 Users
-Created users for support team members.
-
-### 👥 Groups
-- Certificate Group  
-- Platform Group  
-
-### 🔑 Roles
-- Certification_role  
-- Platform_role  
-
-### 🗂 Custom Table
-**Operations Related (u_operations_related)**
-
-### 🧾 Issue Choices
-- Regarding Certificates  
-- Unable to login to platform  
-- 404 Error  
-- Regarding user expired  
-
----
-
-## 🔄 Flow Automation
-
-### 📌 Certificate Flow
-If issue = *Regarding Certificates*  
-➡ Ticket auto-assigned to **Certificate Group**
-
-### 📌 Platform Flow
-If issue =  
-- Unable to login  
-- 404 Error  
-- User expired  
-
-➡ Ticket auto-assigned to **Platform Group**
-
----
-
 ## ▶️ How to Run the Project
 
-Follow the below steps to run this project in ServiceNow:
-
 ### Step 1 — Create ServiceNow Personal Developer Instance
+
 1. Go to https://developer.servicenow.com  
 2. Sign in with your account  
 3. Create a Personal Developer Instance (PDI)
 
 ---
 
-### Step 2 — Import the Update Set
-1. Navigate to:
-   **System Update Sets → Retrieved Update Sets**
-2. Click **Import Update Set from XML**
-3. Upload the project update set file (Streamlining Ticket Assignment).
-4. Click **Preview Update Set**
-5. Resolve any preview problems if shown.
-6. Click **Commit Update Set**.
+### Step 2 — Import Update Set
+
+Navigate to:
+
+
+- Click **Import Update Set from XML**
+- Upload project update set
+- Click **Preview Update Set**
+- Resolve preview issues (if any)
+- Click **Commit Update Set**
 
 ---
 
-### Step 3 — Verify Project Components
-After committing, verify the following:
+### Step 3 — Verify Components
 
-- Custom Table: **Operations Related**
-- Users and Groups created
+Ensure the following are available:
+
+- Operations Related table
+- Users & Groups
 - Roles assigned correctly
 - ACL rules configured
-- Flow Designer flows available:
+- Flow Designer flows:
   - Regarding Certificates
   - Regarding Platform
 
 ---
 
-### Step 4 — Execute the Project
-1. Navigate to:
-   **Operations Related → New**
-2. Fill in ticket details.
-3. Select an Issue type.
-4. Click **Submit**.
+### Step 4 — Execute Project
+
+Navigate to:
+
+
+- Fill ticket details
+- Select Issue type
+- Click Submit
 
 ---
 
 ### Step 5 — Validate Automation
-- If issue = Regarding Certificates  
-  → Ticket auto-assigns to **Certificate Group**
 
-- If issue = Platform related / Login / 404 / User Expired  
-  → Ticket auto-assigns to **Platform Group**
+Expected Results:
+
+- Issue = Regarding Certificates  
+  → Assigned to Certificate Group
+
+- Issue = Login / 404 / User Expired  
+  → Assigned to Platform Group
 
 ---
 
 ### Step 6 — Verify Results
-1. Open the created record.
-2. Check **Assigned to Group** field.
-3. Confirm automatic assignment by Flow Designer.
+
+Open the created record and check:
 
 
+Confirm automatic assignment via Flow Designer.
+
+---
 
 ## 🧪 Testing
-✔ Manual testing performed for:
-- Form submission  
-- Flow execution  
-- Group assignment  
-- ACL access control  
+
+✔ Form submission testing  
+✔ Flow execution testing  
+✔ Group assignment validation  
+✔ ACL security verification
 
 ---
 
-## 🔐 Authentication
-- Role-based access within ServiceNow  
-- Admin-level testing environment  
+## 🚀 Future Enhancements
+
+- Email notifications
+- SLA tracking
+- Dashboard reporting
+- Approval workflows
+- AI-based ticket categorization
 
 ---
 
-## 🚀 Future Scope
-- Email notifications  
-- Dashboard reporting  
-- SLA tracking  
-- Advanced workflow approvals  
+## 🏆 Conclusion
 
----
-
-## 📌 Conclusion
-This project successfully demonstrates ServiceNow automation by integrating custom tables, security roles, and Flow Designer to streamline ticket assignment and improve operational efficiency.
+This project demonstrates how ServiceNow automation can streamline support operations by combining custom tables, security roles, and Flow Designer to automatically route tickets, reduce manual effort, and improve operational efficiency.
 
 ---
 
 ## 📄 License
+
 Free to use for academic and learning purposes.
