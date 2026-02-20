@@ -1,5 +1,7 @@
 # 🎫 Streamlining Ticket Assignment for Efficient Support Operations
 
+⭐ **Project Status: Completed**
+
 > 🚀 A ServiceNow automation project designed to intelligently route support tickets to the correct teams using Flow Designer, custom tables, roles, groups, and ACL-based security.
 
 ---
@@ -9,6 +11,12 @@
 📌 Watch Project Demo:
 
 [▶️ Click here to watch the demo](https://drive.google.com/file/d/17oMzpHHAosefjQNUXeFl3L9oXB2NTOdI/view?usp=drive_link)
+
+---
+
+## 📦 Update Set
+
+[Download Update Set XML](./update-set/Streamlining-Ticket-Assignment-For-Efficient-Support-Operations.xml)
 
 ---
 
@@ -134,6 +142,21 @@ When a new ticket is created:
 ✔ Ticket assigned to correct group  
 ✔ No manual intervention required  
 ✔ Flow execution status = Successful
+
+---
+
+## 🎯 Final Output
+
+When a ticket is created:
+
+- Issue = Regarding Certificates  
+  → Auto assigned to **Certificate Group**
+
+- Issue = Login / 404 / User Expired  
+  → Auto assigned to **Platform Group**
+
+✔ No manual assignment required  
+✔ Flow executes automatically
 
 ---
 
