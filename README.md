@@ -14,6 +14,14 @@
 
 ---
 
+## 📸 Screenshots
+
+Project screenshots are available here:
+
+➡️ [View Screenshots Folder](./Screenshots)
+
+---
+
 ## 📦 Update Set
 
 [Download Update Set XML](./update-set/Streamlining-Ticket-Assignment-For-Efficient-Support-Operations.xml)
