@@ -2,7 +2,7 @@
 
 This repository includes the ServiceNow Update Set XML file for easy project import.
 
-📁 Location:/update-set/Streamlining-Ticket-Assignment-For-Efficient-Support-Operations.xml
+### 📁 Location
 
 
 ### Import Steps
