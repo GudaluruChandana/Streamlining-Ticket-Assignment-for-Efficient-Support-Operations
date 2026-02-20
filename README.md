@@ -24,7 +24,7 @@ Project screenshots are available here:
 
 ## 📦 Update Set
 
-[Download Update Set XML](./update-set/Streamlining-Ticket-Assignment-For-Efficient-Support-Operations.xml)
+[Download Update Set XML](./update-set/Streamlining_Ticket_Assignment_For_Efficient_Support_Operations.xml)
 
 ---
 
